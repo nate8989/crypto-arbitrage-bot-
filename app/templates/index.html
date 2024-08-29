@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arbitrage Bot Dashboard</title>
+</head>
+<body>
+    <h1>Arbitrage Bot Dashboard</h1>
+    <button onclick="executeArbitrage()">Execute Arbitrage</button>
+    
+    <script>
+        function executeArbitrage() {
+            fetch('/api/execute_arbitrage', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => alert(data.status));
+        }
+    </script>
+</body>
+</html>
